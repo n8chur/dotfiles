@@ -1,0 +1,38 @@
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+set cmdheight=2
+
+let mapleader = " "
+
+inoremap jk <ESC>
+
+" Switch between tabs
+noremap <Leader>1 1gt
+noremap <Leader>2 2gt
+noremap <Leader>3 3gt
+noremap <Leader>4 4gt
+noremap <Leader>5 5gt
+noremap <Leader>6 6gt
+noremap <Leader>7 7gt
+noremap <Leader>8 8gt
+noremap <Leader>9 9gt
+
+" Easily create a new tab.
+noremap <Leader>tN :tabnew<CR>
+" Easily close a tab.
+noremap <Leader>tc :tabclose<CR>
+" Easily move a tab.
+noremap <Leader>tm :tabmove<CR>
+" Easily go to next tab.
+noremap <Leader>tn :tabnext<CR>
+" Easily go to previous tab.
+noremap <Leader>tp :tabprevious<CR>
+
