@@ -12,8 +12,6 @@ set cmdheight=2
 
 let mapleader = " "
 
-inoremap jk <ESC>
-
 " Switch between tabs
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt

@@ -67,8 +67,6 @@ noremap <Leader>7 7gt
 noremap <Leader>8 8gt
 noremap <Leader>9 9gt
 
-inoremap jk <ESC>
-
 " Fugitive Conflict Resolution
 nnoremap <leader>gd :Gdiffsplit!<CR>
 nnoremap gdh :diffget //2<CR>
