@@ -218,3 +218,4 @@ nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
 
 nnoremap <leader>ev :vsplit ~/.dotfiles/.vimrc<cr>
+nnoremap <leader>sv :source ~/.dotfiles/.vimrc<cr>
