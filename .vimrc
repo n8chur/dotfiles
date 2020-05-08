@@ -188,7 +188,7 @@ set smartcase
 set incsearch
 set hlsearch
 
-let mapleader = " "
+let mapleader = "\<Space>" 
 
 " Easily create a new tab.
 noremap <Leader>tN :tabnew<CR>
