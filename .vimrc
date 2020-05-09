@@ -250,7 +250,7 @@ nnoremap <leader>vs :vsplit<cr>
 
 let g:netrw_liststyle=3
 
-" statusline (from Marc)
+" statusline (from Marc) {{{
 "
 " %< means truncate on the left if too long
 " %F is full path to the file we are editing
@@ -287,3 +287,5 @@ set statusline+=%-8v
 set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+"
+" }}}
