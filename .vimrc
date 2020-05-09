@@ -190,6 +190,7 @@ set incsearch
 set hlsearch
 
 let mapleader = "\<Space>" 
+let localleader = "\\"
 
 " Easily create a new tab.
 noremap <Leader>tN :tabnew<CR>
