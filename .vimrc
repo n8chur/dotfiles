@@ -226,8 +226,14 @@ nnoremap L $
 " wrap quotes around visual selecion
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 
-" disable arrow keys to force you to learn normal
+" disable arrow keys in input mode to force you to learn normal
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <down> <nop>
 inoremap <up> <nop>
+
+" disable arrow keys in normal mode to force you to stop using it
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <down> <nop>
+nnoremap <up> <nop>
