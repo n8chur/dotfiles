@@ -247,3 +247,5 @@ nnoremap <down> <nop>
 nnoremap <up> <nop>
 
 nnoremap <leader>vs :vsplit<cr>
+
+let g:netrw_liststyle=3
