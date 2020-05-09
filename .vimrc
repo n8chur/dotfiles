@@ -249,3 +249,41 @@ nnoremap <up> <nop>
 nnoremap <leader>vs :vsplit<cr>
 
 let g:netrw_liststyle=3
+
+" statusline (from Marc)
+"
+" %< means truncate on the left if too long
+" %F is full path to the file we are editing
+set statusline=%<%F
+" %m shows [+] if the file is modified but not saved
+set statusline+=%m
+" %r shows [RO] if a file is read-only
+set statusline+=%r
+" %h shows [Help] if we are in a help buffer
+set statusline+=%h
+" %w shows [Preview] if we are in a preview window
+set statusline+=%w
+" separation point between the left and right items
+set statusline+=%=
+" prints the fileformat; that is, the kind of newline (one of unix, dos or
+" mac)
+" (If you type `:set fileformat?`, vim will tell you the current file
+" format)
+set statusline+=%{&fileformat}
+" a literal forward slash
+set statusline+=/
+" %Y shows the filetype, such as VIM or HTML or GO
+set statusline+=%Y
+" %l shows the line number, and %8l uses 8 left-padded spaces to do so
+set statusline+=%8l
+" a literal comma
+set statusline+=,
+" %v shows the virtual column number;
+" instead of counting a tab as one char, it counts it as the number
+" of spaces it uses in the display
+" %-8v leaves 8 spaces to the right to do so
+set statusline+=%-8v
+" syntastic
+set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
