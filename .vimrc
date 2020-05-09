@@ -222,3 +222,6 @@ nnoremap <leader>sv :source ~/.dotfiles/.vimrc<cr>
 
 nnoremap H 0
 nnoremap L $
+
+" wrap quotes around visual selecion
+vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
