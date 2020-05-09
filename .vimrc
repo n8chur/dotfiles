@@ -237,3 +237,5 @@ nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <down> <nop>
 nnoremap <up> <nop>
+
+nnoremap <leader>vs :vsplit<cr>
