@@ -95,6 +95,12 @@ nnoremap <leader>sv :source ~/.dotfiles/.vimrc<cr>
 
 nnoremap <leader>vs :vsplit<cr>
 
+" Show error on trailing whitespace
+nnoremap <leader>w :match Error /\v\s+ $/<cr>
+
+" Remove trailing whitespace
+nnoremap <leader>rw :%s/\v\s+ $//g<cr>
+
 nnoremap H 0
 nnoremap L $
 
