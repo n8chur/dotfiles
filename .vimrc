@@ -30,6 +30,10 @@ set t_Co=256
 set t_ut=
 colorscheme codedark
 
+" color overrides {{{
+highlight Search guibg=peru guifg=wheat
+" }}}
+
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
