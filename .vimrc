@@ -101,6 +101,9 @@ nnoremap <leader>w :match Error /\v\s+ $/<cr>
 " Remove trailing whitespace
 nnoremap <leader>rw :%s/\v\s+ $//g<cr>
 
+" Stop highlighting search
+noremap <leader>sh :nohlsearch<cr>
+
 nnoremap H 0
 nnoremap L $
 
