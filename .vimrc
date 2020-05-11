@@ -113,7 +113,9 @@ nnoremap <leader>rw :%s/\v\s+ $//g<cr>
 noremap <leader>sh :nohlsearch<cr>
 
 nnoremap H 0
+vnoremap H 0
 nnoremap L $
+vnoremap L $
 
 " wrap quotes around visual selecion
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
