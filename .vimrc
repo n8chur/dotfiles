@@ -90,10 +90,18 @@ nnoremap <leader>gd :Gdiffsplit!<CR>
 nnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
 
+" .vimrc editing
 nnoremap <leader>ev :vsplit ~/.dotfiles/.vimrc<cr>
 nnoremap <leader>sv :source ~/.dotfiles/.vimrc<cr>
 
+" Vertical split
 nnoremap <leader>vs :vsplit<cr>
+
+" Quickfix window
+nnoremap <leader>co :copen<cr>
+nnoremap <leader>cl :cclose<cr>
+nnoremap <leader>cn :cnext<cr>
+nnoremap <leader>cp :cprevious<cr>
 
 " Show error on trailing whitespace
 nnoremap <leader>w :match Error /\v\s+ $/<cr>
