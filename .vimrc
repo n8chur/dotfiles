@@ -5,6 +5,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'tomasiser/vim-code-dark'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -21,6 +22,11 @@ augroup plug_install_if_necessary
                 \|   PlugInstall --sync | q
                 \| endif
 augroup END
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Add an ':Ag' command for searching
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 " }}}
 
 syntax on
