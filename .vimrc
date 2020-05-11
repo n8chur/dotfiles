@@ -118,6 +118,24 @@ nnoremap L $
 " wrap quotes around visual selecion
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 
+" grep from selection {{{
+nnoremap <leader>g :set operatorfunc=GrepOperator<cr>g@
+vnoremap <leader>g :<c-u>call GrepOperator(visualmode())<cr>
+
+function! GrepOperator(type)
+    if a:type ==# 'v'
+        normal! `<v`>y
+    elseif a:type ==# 'char'
+        normal! `[v`]y
+    else
+        return
+    endif
+
+    silent execute "grep! -R " . shellescape(@@) . " ."
+    copen
+endfunctio
+" }}}
+
 " Unmap Arrows {{{
 " disable arrow keys in input mode to force you to learn normal
 inoremap <left> <nop>
