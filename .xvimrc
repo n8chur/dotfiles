@@ -10,7 +10,13 @@ set hlsearch
 
 set cmdheight=2
 
-let mapleader = " "
+nnoremap H 0
+vnoremap H 0
+nnoremap L $
+vnoremap L $
+
+let mapleader = "\<Space>"
+let localleader = "\\"
 
 " Switch between tabs
 noremap <Leader>1 1gt
