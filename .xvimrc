@@ -15,28 +15,26 @@ vnoremap H 0
 nnoremap L $
 vnoremap L $
 
-let mapleader = "\<Space>"
-let localleader = "\\"
-
 " Switch between tabs
-noremap <Leader>1 1gt
-noremap <Leader>2 2gt
-noremap <Leader>3 3gt
-noremap <Leader>4 4gt
-noremap <Leader>5 5gt
-noremap <Leader>6 6gt
-noremap <Leader>7 7gt
-noremap <Leader>8 8gt
-noremap <Leader>9 9gt
+noremap <Space>1 1gt
+noremap <Space>2 2gt
+noremap <Space>3 3gt
+noremap <Space>4 4gt
+noremap <Space>5 5gt
+noremap <Space>6 6gt
+noremap <Space>7 7gt
+noremap <Space>8 8gt
+noremap <Space>9 9gt
 
 " Easily create a new tab.
-noremap <Leader>tN :tabnew<CR>
+noremap <Space>tN :tabnew<CR>
 " Easily close a tab.
-noremap <Leader>tc :tabclose<CR>
-" Easily move a tab.
-noremap <Leader>tm :tabmove<CR>
+noremap <Space>tc :tabclose<CR>
 " Easily go to next tab.
-noremap <Leader>tn :tabnext<CR>
+noremap <Space>tn :xccmd selectNextTab<CR>
 " Easily go to previous tab.
-noremap <Leader>tp :tabprevious<CR>
+noremap <Space>tp :xccmd selectPreviousTab<CR>
+
+" Search for the selected string
+vnoremap <Space>g :xccmd findSelectedTextInWorkspace<CR>
 
