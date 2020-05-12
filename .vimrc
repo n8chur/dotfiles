@@ -23,10 +23,11 @@ augroup plug_install_if_necessary
                 \| endif
 augroup END
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" Use The Silver Searcher for Ack
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 
-" Add an ':Ag' command for searching
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 " }}}
 
 syntax on
@@ -126,7 +127,7 @@ vnoremap L $
 " wrap quotes around visual selecion
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 
-" grep from selection {{{
+" find in source from selection {{{
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
 vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
@@ -141,7 +142,7 @@ function! s:GrepOperator(type)
         return
     endif
 
-    silent execute "grep! -R " . shellescape(@@, 1) . " ."
+    silent execute "Ack! " . shellescape(@@, 1)
     copen
 
     let @@ = saved_unnamed_register
