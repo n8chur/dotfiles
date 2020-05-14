@@ -12,7 +12,7 @@ call plug#end()
 let g:coc_global_extensions = [
             \ 'coc-json', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-yaml', 'coc-java', 'coc-eslint', 'coc-emoji',
             \ 'coc-svg', 'coc-sh', 'coc-vimlsp', 'coc-git', 'coc-xml', 'coc-yank', 'coc-highlight', 'coc-snippets',
-            \ 'coc-sourcekit'
+            \ 'coc-sourcekit', 'coc-clangd'
             \ ]
 
 augroup plug_install_if_necessary
