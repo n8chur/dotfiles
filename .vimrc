@@ -126,6 +126,8 @@ vnoremap L $
 " wrap quotes around visual selecion
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 
+tnoremap <Esc> <C-\><C-n>
+
 " find in source from selection {{{
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
 vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
