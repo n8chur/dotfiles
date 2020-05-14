@@ -202,8 +202,6 @@ set statusline+=%*
 "
 " }}}
 
-let g:netrw_liststyle=3
-
 " coc recommended {{{
 
 " TextEdit might fail if hidden is not set.
