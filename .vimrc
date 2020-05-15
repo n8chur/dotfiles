@@ -58,6 +58,9 @@ set smartcase
 set incsearch
 set hlsearch
 
+set splitbelow
+set splitright
+
 " Vimscript file settings {{{
 augroup filetype_vim
     autocmd!
