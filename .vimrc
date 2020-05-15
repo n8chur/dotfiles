@@ -391,8 +391,10 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Yank/delete to selection register on Windows Ubuntu (WSL) {{{
 " Note that this may make things really slow in large files.
 " Disable with ':set eventignore=TextYankPost' and enable with ':set eventignore&'.
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
+
 function! s:IsWSL()
-    if has("unix")
+    if has("unix") && executable(s:clip)
         let lines = readfile("/proc/version")
         if lines[0] =~ "Microsoft"
             return 1
@@ -400,8 +402,6 @@ function! s:IsWSL()
     endif
     return 0
 endfunction
-
-let s:clip = '/mnt/c/Windows/System32/clip.exe'
 
 function! s:ClipIfSelectionReg(event)
     if index(['*', '+'], a:event.regname) < 0
