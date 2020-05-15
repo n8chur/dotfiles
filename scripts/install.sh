@@ -4,12 +4,12 @@
 DIR=$HOME/.dotfiles
 
 DOTFILES=(
-	".vimrc"
+    ".vimrc"
     ".xvimrc"
-	".config/nvim"
+    ".config/nvim"
 )
 
 for dotfile in "${DOTFILES[@]}";do
-	rm -rf "${HOME}/${dotfile}"
-	ln -sf "${DIR}/${dotfile}" "${HOME}/${dotfile}"
+    rm -rf "${HOME}/${dotfile}"
+    ln -sf "${DIR}/${dotfile}" "${HOME}/${dotfile}"
 done
