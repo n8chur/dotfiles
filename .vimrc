@@ -100,24 +100,40 @@ noremap <Leader>9 9gt
 
 " Window navigation {{{
 tnoremap <M-h> <c-\><c-n><c-w>h
+tnoremap ˙ <c-\><c-n><c-w>h
 tnoremap <M-j> <c-\><c-n><c-w>j
+tnoremap ∆ <c-\><c-n><c-w>j
 tnoremap <M-k> <c-\><c-n><c-w>k
+tnoremap ˚ <c-\><c-n><c-w>k
 tnoremap <M-l> <c-\><c-n><c-w>l
+tnoremap ¬ <c-\><c-n><c-w>l
 
 inoremap <M-h> <Esc><c-w>h
+inoremap ˙ <Esc><c-w>h
 inoremap <M-j> <Esc><c-w>j
+inoremap ∆ <Esc><c-w>j
 inoremap <M-k> <Esc><c-w>k
+inoremap ˚ <Esc><c-w>k
 inoremap <M-l> <Esc><c-w>l
+inoremap ¬ <Esc><c-w>l
 
 vnoremap <M-h> <Esc><c-w>h
+vnoremap ˙ <Esc><c-w>h
 vnoremap <M-j> <Esc><c-w>j
+vnoremap ∆ <Esc><c-w>j
 vnoremap <M-k> <Esc><c-w>k
+vnoremap ˚ <Esc><c-w>k
 vnoremap <M-l> <Esc><c-w>l
+vnoremap ¬ <Esc><c-w>l
 
 nnoremap <M-h> <c-w>h
+nnoremap ˙ <c-w>h
 nnoremap <M-j> <c-w>j
+nnoremap ∆ <c-w>j
 nnoremap <M-k> <c-w>k
+nnoremap ˚ <c-w>k
 nnoremap <M-l> <c-w>l
+nnoremap ¬ <c-w>l
 " }}}
 
 " Fugitive Conflict Resolution
