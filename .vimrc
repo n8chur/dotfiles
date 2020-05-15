@@ -158,6 +158,9 @@ tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 " 'Verbatim' escape
 tnoremap <C-v><Esc> <Esc>
 
+" Fzf mappings
+noremap <leader>O :GFiles<cr>
+
 " find in source from selection {{{
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
 vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
