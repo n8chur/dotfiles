@@ -6,6 +6,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'tomasiser/vim-code-dark'
 Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -27,7 +29,6 @@ augroup END
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
-
 " }}}
 
 syntax on
