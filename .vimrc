@@ -148,7 +148,11 @@ vnoremap L $
 " wrap quotes around visual selecion
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 
+" Terminal mappings
 tnoremap <Esc> <C-\><C-n>
+tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
+" 'Verbatim' escape
+tnoremap <C-v><Esc> <Esc>
 
 " find in source from selection {{{
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
