@@ -391,12 +391,13 @@ function! s:IsWSL()
     return 0
 endfunction
 
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
+
 function! s:ClipIfSelectionReg(event)
     if index(['*', '+'], a:event.regname) < 0
         return
     endif
 
-    let s:clip = '/mnt/c/Windows/System32/clip.exe'
     call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
 endfunction
 
