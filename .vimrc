@@ -61,6 +61,8 @@ set hlsearch
 set splitbelow
 set splitright
 
+set inccommand=nosplit
+
 " Vimscript file settings {{{
 augroup filetype_vim
     autocmd!
