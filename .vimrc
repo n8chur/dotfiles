@@ -37,6 +37,7 @@ set background=dark
 set t_Co=256
 set t_ut=
 colorscheme codedark
+highlight Folded guifg=Grey
 
 " color overrides {{{
 highlight Search guibg=peru guifg=wheat
