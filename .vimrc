@@ -55,7 +55,14 @@ augroup END
 
 " Use The Silver Searcher for Ack
 if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag --hidden --vimgrep'
+
+    let g:ag_prg = 'ag --hidden --vimgrep'
+
+    " Hack to get ag to show hidden files (except .git/)
+    function! fzf#vim#ag_raw(command_suffix, ...)
+        return call('fzf#vim#grep', extend(['ag --nogroup --column --color --hidden --ignore .git'.a:command_suffix, 1], a:000))
+    endfunction
 endif
 " }}}
 
