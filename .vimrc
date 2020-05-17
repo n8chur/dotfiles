@@ -63,6 +63,9 @@ if executable('ag')
     function! fzf#vim#ag_raw(command_suffix, ...)
         return call('fzf#vim#grep', extend(['ag --nogroup --column --color --hidden --ignore .git'.a:command_suffix, 1], a:000))
     endfunction
+
+    nnoremap <leader>F :Ag<cr>
+    vnoremap <leader>F :<c-u>Ag<cr>
 endif
 " }}}
 
