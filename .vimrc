@@ -26,17 +26,32 @@ Plug 'itchyny/lightline.vim'
 call plug#end()
 
 let g:coc_global_extensions = [
-            \ 'coc-json', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-yaml', 'coc-java', 'coc-eslint', 'coc-emoji',
-            \ 'coc-svg', 'coc-sh', 'coc-vimlsp', 'coc-git', 'coc-xml', 'coc-yank', 'coc-highlight', 'coc-snippets',
-            \ 'coc-sourcekit', 'coc-clangd'
-            \ ]
+    \ 'coc-json',
+    \ 'coc-tsserver',
+    \ 'coc-html',
+    \ 'coc-css',
+    \ 'coc-yaml',
+    \ 'coc-java',
+    \ 'coc-eslint',
+    \ 'coc-emoji',
+    \ 'coc-svg',
+    \ 'coc-sh',
+    \ 'coc-vimlsp',
+    \ 'coc-git',
+    \ 'coc-xml',
+    \ 'coc-yank',
+    \ 'coc-highlight',
+    \ 'coc-snippets',
+    \ 'coc-sourcekit',
+    \ 'coc-clangd'
+    \ ]
 
 augroup plug_install_if_necessary
     autocmd!
     autocmd VimEnter *
-                \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-                \|   PlugInstall --sync | q
-                \| endif
+        \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+        \|   PlugInstall --sync | q
+        \| endif
 augroup END
 
 " Use The Silver Searcher for Ack
