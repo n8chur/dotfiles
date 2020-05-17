@@ -49,6 +49,7 @@ set t_Co=256
 set t_ut=
 colorscheme codedark
 highlight Folded guifg=Grey
+highlight Comment cterm=italic term=italic gui=italic
 
 " color overrides {{{
 highlight Search guibg=peru guifg=wheat
