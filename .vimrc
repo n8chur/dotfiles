@@ -1,13 +1,24 @@
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
+" Language
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Git
 Plug 'tpope/vim-fugitive'
-Plug 'tomasiser/vim-code-dark'
+Plug 'tpope/vim-rhubarb'
+Plug 'sodapopcan/vim-twiggy'
+Plug 'rbong/vim-flog'
+
+
+" Search etc.
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Colors
+Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
 
