@@ -102,7 +102,7 @@ augroup filetype_vim
 augroup END
 " }}}
 
-let mapleader = "\<Space>" 
+let mapleader = "\<Space>"
 let localleader = "\\"
 
 " Tab stuff {{{
@@ -186,10 +186,10 @@ nnoremap <leader>cn :cnext<cr>
 nnoremap <leader>cp :cprevious<cr>
 
 " Show error on trailing whitespace
-nnoremap <leader>w :match Error /\v\s+ $/<cr>
+nnoremap <silent> <leader>w :match Error /\v\s+$/<cr>
 
 " Remove trailing whitespace
-nnoremap <leader>rw :%s/\v\s+ $//g<cr>
+nnoremap <leader>rw :%s/\v\s+$//g<cr>
 
 " Stop highlighting search
 noremap <leader>sh :nohlsearch<cr>
@@ -212,7 +212,7 @@ tnoremap <C-v><Esc> <Esc>
 if isdirectory(".git")
     " if in a git project, use :GFiles
     nnoremap <silent> <leader>O :GitFiles --cached --others --exclude-standard<cr>
-else 
+else
     "otherwise, use :FZF
     nnoremap <silent> <leader>O :FZF<cr>
 endif
