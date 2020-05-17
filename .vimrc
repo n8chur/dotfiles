@@ -197,6 +197,10 @@ else
     nnoremap <silent> <leader>O :FZF<cr>
 endif
 
+" Vsplit netrw and move swap positions (so it's on left)
+nnoremap <leader>l :20Lexplore<cr>
+let g:netrw_liststyle=3
+
 " find in source from selection {{{
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
 vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
