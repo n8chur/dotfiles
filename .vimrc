@@ -178,7 +178,13 @@ tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 tnoremap <C-v><Esc> <Esc>
 
 " Fzf mappings
-noremap <leader>O :GFiles<cr>
+if isdirectory(".git")
+    " if in a git project, use :GFiles
+    nnoremap <silent> <leader>O :GitFiles --cached --others --exclude-standard<cr>
+else 
+    "otherwise, use :FZF
+    nnoremap <silent> <leader>O :FZF<cr>
+endif
 
 " find in source from selection {{{
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
