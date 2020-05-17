@@ -11,7 +11,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'sodapopcan/vim-twiggy'
 Plug 'rbong/vim-flog'
 
-
 " Search etc.
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }
