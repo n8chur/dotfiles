@@ -60,9 +60,15 @@ if executable('ag')
     let g:ag_prg = 'ag --hidden --ignore .git --vimgrep'
 
     " Hack to get ag to show hidden files (except .git/)
-    function! fzf#vim#ag_raw(command_suffix, ...)
-        return call('fzf#vim#grep', extend(['ag --nogroup --column --color --hidden --ignore .git'.a:command_suffix, 1], a:000))
-    endfunction
+    let s:ag_options = ' --hidden --ignore .git'
+    command! -bang -nargs=* Ag 
+        \ call fzf#vim#ag(
+        \ <q-args>, 
+        \ s:ag_options,
+        \ <bang>0 ? fzf#vim#with_preview('up:60%')
+        \   : fzf#vim#with_preview('right:50%:hidden', '?'),
+        \ <bang>0
+        \ )
 
     nnoremap <leader>F :Ag<cr>
     vnoremap <leader>F :<c-u>Ag<cr>
