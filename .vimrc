@@ -24,6 +24,7 @@ Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
+" coc extensions
 let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-tsserver',
@@ -45,6 +46,7 @@ let g:coc_global_extensions = [
     \ 'coc-clangd'
     \ ]
 
+" Update plugins if necessary
 augroup plug_install_if_necessary
     autocmd!
     autocmd VimEnter *
