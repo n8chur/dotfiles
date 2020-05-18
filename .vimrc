@@ -245,9 +245,19 @@ let g:netrw_liststyle = 3
 let g:netrw_altv = 1
 let g:netrw_winsize = 20
 let g:netrw_browse_split = 4
+
+function! ProjectDrawer()
+   if argc() == 1 && isdirectory(argv(0))
+       echom 'running with directory'
+       Lexplore | wincmd p | enew | wincmd p
+   else 
+       Lexplore | wincmd p
+   endif
+endfunction
+   
 augroup ProgjectDrawer
-    autocmd!
-    autocmd VimEnter * :Lexplore
+   autocmd!
+   autocmd VimEnter * call ProjectDrawer()
 augroup End
 
 " find in source from selection {{{
