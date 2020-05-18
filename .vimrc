@@ -235,8 +235,15 @@ else
 endif
 
 " Vsplit netrw and move swap positions (so it's on left)
-nnoremap <leader>l :20Lexplore<cr>
-let g:netrw_liststyle=3
+nnoremap <leader>l :Lexplore<cr>
+let g:netrw_liststyle = 3
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
+let g:netrw_browse_split = 4
+augroup ProgjectDrawer
+    autocmd!
+    autocmd VimEnter * :Lexplore
+augroup End
 
 " find in source from selection {{{
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
