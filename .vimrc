@@ -77,6 +77,11 @@ if executable('ag')
 endif
 " }}}
 
+" Fixes an issue where Prompt 2 (iPad) would print 'q's randomly
+set guicursor=
+" Workaround some broken plugins which set guicursor indiscriminately.
+:autocmd OptionSet guicursor noautocmd set guicursor=
+
 syntax on
 set termguicolors
 set background=dark
