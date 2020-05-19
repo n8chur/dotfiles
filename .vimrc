@@ -246,16 +246,20 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 20
 let g:netrw_special_syntax = 1
 
+let s:has_initialized_project_drawer = 0
 function! ProjectDrawer()
+    if s:has_initialized_project_drawer
+        return
+    endif
    if argc() == 1 && isdirectory(argv(0))
-       echom 'running with directory'
        Lexplore | wincmd p | enew | wincmd p
    else 
        Lexplore | wincmd p
    endif
+   let s:has_intialized_project_drawer = 1
 endfunction
    
-augroup ProgjectDrawer
+augroup ProjectDrawer
    autocmd!
    autocmd VimEnter * call ProjectDrawer()
 augroup End
