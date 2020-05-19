@@ -234,6 +234,11 @@ else
     nnoremap <silent> <leader>O :FZF<cr>
 endif
 
+" Automatically change directories (set autochdir can mess with plugins)
+augroup AutochangeDir
+    autocmd BufEnter * silent! lcd %:p:h
+augroup End
+
 " Vsplit netrw and move swap positions (so it's on left)
 nnoremap <leader>l :Lexplore<cr>
 let g:netrw_liststyle = 3
