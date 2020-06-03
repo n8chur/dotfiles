@@ -15,6 +15,9 @@ vnoremap H 0
 nnoremap L $
 vnoremap L $
 
+nnoremap n nzz
+nnoremap N Nzz
+
 " Switch between tabs
 noremap <Space>1 1gt
 noremap <Space>2 2gt
