@@ -15,8 +15,9 @@ vnoremap H 0
 nnoremap L $
 vnoremap L $
 
-nnoremap n nzz
-nnoremap N Nzz
+" These were auto completing in command prompt mode so they were disabled
+" nnoremap n nzz
+" nnoremap N Nzz
 
 " Switch between tabs
 noremap <Space>1 1gt
