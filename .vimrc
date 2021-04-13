@@ -184,6 +184,10 @@ nnoremap <M-l> <c-w>l
 nnoremap ¬ <c-w>l
 " }}}
 
+" Window resizing
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
 " Fugitive Conflict Resolution
 nnoremap <leader>gd :Gdiffsplit!<CR>
 nnoremap gdh :diffget //2<CR>
