@@ -18,6 +18,7 @@ Plug 'junegunn/fzf.vim'
 
 " Colors
 Plug 'tomasiser/vim-code-dark'
+Plug 'romgrk/github-light.vim'
 
 " Statusbar
 Plug 'itchyny/lightline.vim'
@@ -79,10 +80,19 @@ endif
 
 syntax on
 set termguicolors
-set background=dark
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == "Light"
+    set background=light
+    colorscheme github-light
+    let g:lightline = {
+      \ 'colorscheme': 'github_light',
+      \ }
+else
+    set background=dark
+    colorscheme codedark
+endif
 set t_Co=256
 set t_ut=
-colorscheme codedark
 highlight Folded guifg=Grey
 highlight Comment cterm=italic term=italic gui=italic
 
